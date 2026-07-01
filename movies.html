@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Movies</h2>
+
+<form method="POST">
+    <input type="text" name="search" placeholder="Search movie">
+    <button type="submit">Search</button>
+</form>
+
+<table border="1">
+<tr>
+    <th>Title</th><th>Director</th><th>Country</th><th>Year</th><th>Duration</th>
+</tr>
+
+{% for m in movies %}
+<tr>
+    <td>{{ m.title }}</td>
+    <td>{{ m.director }}</td>
+    <td>{{ m.country }}</td>
+    <td>{{ m.release_year }}</td>
+    <td>{{ m.duration }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

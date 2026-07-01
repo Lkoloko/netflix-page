@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Dashboard</h2>
+
+<p>Movies: {{ num_movies }}</p>
+<p>TV Shows: {{ num_shows }}</p>
+<p>Most Common Rating: {{ common_rating }}</p>
+<p>Total Movie Hours: {{ total_movie_hours }}</p>
+
+<h3>Recent Movies</h3>
+<ul>
+    {% for movie in recent_movies %}
+        <li>{{ movie.title }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

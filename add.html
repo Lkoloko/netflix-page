@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add New</h2>
+
+<form method="POST">
+    <input name="type" placeholder="Movie or TV Show"><br>
+    <input name="title" placeholder="Title"><br>
+    <input name="director" placeholder="Director"><br>
+    <input name="country" placeholder="Country"><br>
+    <input name="year" placeholder="Year"><br>
+    <input name="duration" placeholder="Duration"><br>
+    <input name="rating" placeholder="Rating"><br>
+
+    <button type="submit">Add</button>
+</form>
+
+{% endblock %}
